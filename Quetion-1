@@ -1,0 +1,29 @@
+Answer 1:-
+* Graal is a high-performance JIT compiler. It accepts the JVM bytecode and produces the machine code.
+  There are several key advantages of writing a compiler in Java. First of all, safety, meaning no crashes but exceptions instead and no real memory leaks. 
+  Furthermore, we'll have a good IDE support and we'll be able to use debuggers or profilers or other convenient tools. Also, the compiler can be independent 
+  of the HotSpot and it would be able to produce a faster JIT-compiled version of itself.
+  
+* The Graal compiler was created with those advantages in mind. It uses the new JVM Compiler Interface – JVMCI to communicate with the VM. To enable the use of 
+  the new JIT compiler, we need to set the following options when running Java from the command line:
+  
+  -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI -XX:+UseJVMCICompiler
+
+* Graal is good for:-
+1. Accelerating Java performance:- GraalVM’s high-performance JIT compiler generates optimized native machine code that runs faster, produces less 
+                                   garbage, and uses less CPU thanks to a battery of advanced compiler optimizations and aggressive and sophisticated 
+                                   inlining techniques. The end results are applications that run faster and consume fewer resources—reducing cloud and
+                                   infrastructure costs.
+                                
+2. Better performance with no code changes:- While the OpenJDK project moves forward with the 6-month release cadence, which offers time-based release model
+                                            where features get in whenever they are ready, a large part of the Java ecosystem is still using Java 8 and Java
+                                            11 in production.
+                                            
+3. Supported by industry-leading Java application frameworks:- Supported by industry-leading Java application frameworks, GraalVM is often cited as the most exciting 
+                                                               innovation in the Java ecosystem. For example, the ability to compile applications into native executables 
+                                                               with the Native Image technology.
+                                                               
+4. Lower infrastructure costs:- Higher application performance and lower CPU and memory usage are goals every developer strives for. These goals are definitely laudable, 
+                                and achieving them is easier with GraalVM, but the real value of these improvements is a reduction in the cost to run an application in
+                                production. Faster applications with lower resource requirements translate into fewer servers required to deliver a given service, and
+                                fewer servers means lower monthly cloud bills and lower capital and operating costs for on premises deployments.
